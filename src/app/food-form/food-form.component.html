@@ -1,0 +1,11 @@
+<form [formGroup]="foodForm">
+    <h1>Add a new food</h1>
+    <p>Id: <input type="text" formControlName="fid"></p>
+    <p style="color: red" *ngIf="(foodForm.get('fid')?.dirty || foodForm.get('fid')?.touched) && foodForm.get('fid')?.hasError('required')">Id is required</p>
+    <p>Name: <input type="text" formControlName="foodName"></p>
+    <p>Color: <input type="text" formControlName="color"></p>
+    <p>Description: <input type="text" formControlName="description"></p>
+    <p>group: <input type="text" formControlName="group"></p>
+    <button (click)="addFood(foodForm.value)" [disabled]="foodForm.invalid">Add Food</button>
+</form>
+<router-outlet></router-outlet>

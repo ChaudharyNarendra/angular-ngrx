@@ -1,0 +1,26 @@
+[
+    {
+        "fid": "1",
+        "foodName": "Abc",
+        "description": "abc",
+        "color": "red",
+        "Group": "abc"
+
+    },
+    {
+        "fid": "12",
+        "foodName": "Abcdefg",
+        "description": "abcdefg",
+        "color": "blue",
+        "Group": "abcdefg"
+
+    },
+    {
+        "fid": "30",
+        "foodName": "Rice",
+        "description": "Oryza glaberrima",
+        "color": "white",
+        "Group": "Oryza glaberrima"
+
+    }
+]

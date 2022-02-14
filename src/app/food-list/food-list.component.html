@@ -1,0 +1,27 @@
+<div style="margin: 1rem 2rem;">
+    <h3>List of foods: {{(foods$ | async)?.length}}</h3>
+
+    <!-- <ng-container *ngFor="let food of foods$ | async">
+        <div class="mb-1">
+            <div class="lh-1"> Id : {{food.fid}}</div>
+            <div class="lh-1"> Name : {{food.foodName}}</div>
+            <div class="lh-1"> Color : {{food.color}}</div>
+            <button (click)="deleteFood(food)">Delete Item</button>
+        </div>
+    </ng-container> -->
+
+    <table>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Color</th>
+          <th>Delete record</th>
+        </tr>
+        <tr *ngFor="let food of foods$ | async">
+          <td>{{food.fid}}</td>
+          <td>{{food.foodName}}</td>
+          <td>{{food.color}}</td>
+          <td><button (click)="deleteFood(food)">Delete Item</button></td>
+        </tr>
+    </table>
+</div>
